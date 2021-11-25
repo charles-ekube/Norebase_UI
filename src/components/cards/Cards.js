@@ -7,7 +7,7 @@ const Cards = ({ padding, borderLeftColor, children }) => {
         style={{
           background: "#fff",
           padding: padding,
-          borderLeft: "2px solid",
+          borderLeft: "3px solid",
           borderLeftColor: borderLeftColor,
         }}
       >

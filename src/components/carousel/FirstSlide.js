@@ -6,7 +6,10 @@ const FirstSlide = () => {
   return (
     <>
       <section className="grid-layout">
-        <Cards>
+        <Cards 
+            borderLeftColor={'#FAD1EC'}
+            padding={"0 0 10px 20px"}
+        >
           <h5>Africa with no bothers borders</h5>
           <p>
             Experience Africa as one market. We are your ticket to 54 African
@@ -15,7 +18,11 @@ const FirstSlide = () => {
             African country is 10x easier, safer, and more efficient with us.
           </p>
         </Cards>
-        <Cards>
+
+        <Cards
+            borderLeftColor={'#FFE6E6'}
+            padding={"0 0 10px 20px"}
+        >
           <h5>Setting up a new country operation? Do it right</h5>
           <p>
             You’ve worked hard to launch in a new country. But if your company
@@ -25,7 +32,10 @@ const FirstSlide = () => {
             fast.
           </p>
         </Cards>
-        <Cards>
+        <Cards
+        borderLeftColor={'#F1F1C9'}
+        padding={"0 0 10px 20px"}
+        >
           <h5>Set up in no time</h5>
           <p>
             You don’t need a team of lawyers or spend weeks or months
@@ -35,7 +45,10 @@ const FirstSlide = () => {
             when you sign up on Norebase.
           </p>
         </Cards>
-        <Cards>
+        <Cards 
+        borderLeftColor={"#E4FBB6"}
+        padding={"0 0 10px 20px"}
+        >
           <h5>Everything you need to start or expand</h5>
           <p>
             We’ll give you everything you need to start, operate, and scale in

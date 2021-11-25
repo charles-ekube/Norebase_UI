@@ -16,6 +16,7 @@ import Navbar from "../../components/widgets/navbar/Navbar";
 import Footer from "../../components/widgets/footer/Footer";
 import NavComponent from "../../components/nav/NavComponent";
 import CarouselSlider from "../../components/carousel/CarouselSlider";
+import SlidesData from "../../components/carousel/CarouselGrid";
 
 const Home = () => {
   return (
@@ -153,7 +154,7 @@ const Home = () => {
           </section>
 
           <section style={{padding:'50px 0'}}>
-            <CarouselSlider/>
+            <CarouselSlider slides={SlidesData}/>
           </section>
           
           <section>

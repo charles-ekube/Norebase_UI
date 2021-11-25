@@ -6,7 +6,7 @@ const SecondSlide = () => {
   return (
     <>
       <section className="grid-layout">
-        <Cards>
+        <Cards borderLeftColor={"#D1FAFA"} padding={"0 0 10px 20px"}>
           <h5>We know the right people</h5>
           <p>
             Looking for a lawyer? Or a company secretary? We’ve got you. You
@@ -15,7 +15,7 @@ const SecondSlide = () => {
             services.
           </p>
         </Cards>
-        <Cards>
+        <Cards borderLeftColor={"#DFFAD1"} padding={"0 0 10px 20px"}>
           <h5>
             Tell us where you want to launch, we’ll tell you what you need
           </h5>
@@ -26,7 +26,7 @@ const SecondSlide = () => {
             in.
           </p>
         </Cards>
-        <Cards>
+        <Cards borderLeftColor={"#D2F5DE"} padding={"0 0 10px 20px"}>
           <h5>Transparent process</h5>
           <p>
             Be up to date on the whole process. Real-time updates on the status
@@ -34,7 +34,7 @@ const SecondSlide = () => {
             registration.
           </p>
         </Cards>
-        <Cards>
+        <Cards borderLeftColor={"#F5F5CC"} padding={"0 0 10px 20px"}>
           <h5>100% focused on your success</h5>
           <p>
             Norebase is committed to helping your company succeed in new

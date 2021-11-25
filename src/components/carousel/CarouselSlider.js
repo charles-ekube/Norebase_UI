@@ -1,35 +1,50 @@
-import React from "react";
-import Cards from "../cards/Cards";
+import React, { useState } from "react";
 import "./carouselStyles.css";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import FirstSlide from "./FirstSlide";
-import SecondSlide from "./SecondSlide";
+import SlidesData from "./CarouselGrid";
 
+const CarouselSlider = ({ slides }) => {
+  const [current, setCurrent] = useState(0);
+  const length = slides.length;
 
-const data = [
-  <FirstSlide/>,
-    
- <SecondSlide/>,
-    
+  const nextSlide = () => {
+    setCurrent(current === length - 1 ? 0 : current + 1);
+  };
 
-]
+  const prevSlide = () => {
+    setCurrent(current === 0 ? length - 1 : current - 1);
+  };
+  console.log(current);
 
-const CarouselSlider = () => {
-
+  if (!Array.isArray(slides) || slides.length <= 0) {
+    return null;
+  }
 
   return (
     <>
-      <section>
-          <div className='arrows arrow-left'>
-             <FaArrowLeft/>   
-          </div>
-          <div className='arrows arrow-right'>
-             <FaArrowRight/>   
-          </div>
-          {data.map((slide, index) => {
+      <section className="slider-container">
+        <div className="arrows left-arrow" onClick={prevSlide}>
+          <FaArrowLeft />
+        </div>
+        <div className="arrows right-arrow" onClick={nextSlide}>
+          <FaArrowRight />
+        </div>
+        {/* {data.map((slide, index) => {
               return <div>{slide}</div>
-          })}
-     
+          })} */}
+        {SlidesData.map((slide, index) => {
+          return (
+            <section
+              className={index === current ? "slide active" : "slide"}
+              key={index}
+            >
+              {index === current && (
+                <div className="slide-container">{slide}</div>
+              )}
+              
+            </section>
+          )
+        })}
       </section>
     </>
   );

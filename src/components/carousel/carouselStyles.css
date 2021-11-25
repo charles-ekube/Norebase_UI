@@ -1,19 +1,78 @@
 .grid-layout {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    padding: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 20px 0;
+  gap: 20px;
+}
+.grid-layout h5 {
+  font-family: NeueHaasDisplay-Medium;
+  font-size: 18px;
+  color: rgb(14, 16, 26);
+  line-height: 1.35;
+  width: 479.922px;
+}
+.grid-layout p {
+  font-family: NeueHaasDisplay-Roman;
+  font-size: 18px;
+  color: rgb(60, 60, 60);
+  line-height: 1.65;
+  margin: 10px 0;
+  width: 479.922px;
+  overflow-wrap: break-word;
 }
 .arrows {
-    z-index: 5;
-    height: 110px;
-    width: 110px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:#DCDCDC;
-    font-size: 32px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 200px;
-    box-shadow: rgb(0 0 0 / 10%) 0px 0px 100px 0px;
-    cursor: pointer;
+  z-index: 5;
+  height: 110px;
+  width: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #dcdcdc;
+  font-size: 32px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 200px;
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 100px 0px;
+  cursor: pointer;
+}
+.slider-container {
+  padding: 50px 160px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.slide-container {
+  width: 100%;
+}
+.right-arrow {
+  position: absolute;
+  top: 40%;
+  right: 30px;
+}
+.left-arrow {
+  position: absolute;
+  top: 40%;
+  left: 30px;
+}
+
+@media screen and (max-width: 1225px) {
+    .grid-layout {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 20px 0;
+        gap: 20px;
+      }
+      .grid-layout h5 {
+        width:auto;
+      }
+      .grid-layout p {
+        width: auto;
+      }
+      .arrows {
+      display: none;
+      }
+      .slider-container {
+        padding: 50px 30px;
+      }
+  
+    
 }
