@@ -1,0 +1,103 @@
+<main className="container">
+        <section className="hero-section">
+          <div className="hero-section-overlay">
+            <article className="hero-section-overlay-content">
+              <div className="hero-section-header">
+                <h1 className="first-child">Launch in </h1>
+                <Typewriter
+                  options={{
+                    strings: [
+                      "Lagos",
+                      "Nairobi",
+                      "Cape Town",
+                      "Accra",
+                      "Cairo",
+                      "Abidjan",
+                      "Kigali",
+                    ],
+                    autoStart: true,
+                    loop: true,
+                    wrapperClassName: "second-child",
+                    cursorClassName: "second-child-cursor",
+                  }}
+                />
+                <h1 className="third-child"> without hopping on a plane.</h1>
+              </div>
+              <div style={{ width: "710px" }}>
+                <p className="hero-text">
+                  We are your gateway to the African Market. We’ll help you
+                  start, operate and scale across Africa with no stress. Whether
+                  you want to launch in Ghana, or trademark your IP in South
+                  Africa, or register for taxes in Kenya, we’ve got you covered.
+                </p>
+              </div>
+            </article>
+            <div>
+              <CustomButtons
+                title="Get Started"
+                background="rgb(18, 185, 186)"
+              />
+            </div>
+            <div className="hero-button-footer">
+              <img src={NoteIcon} alt="icon" />
+              <p>
+                No confusing paperwork, no complexities, and no hidden fees!
+              </p>
+            </div>
+          </div>
+        </section>
+        <section className="hero-section-footer">
+          <h4>TRUSTED BY</h4>
+          <ul>
+            <li>
+              <img src={AfroPrenuer} alt="poster" />
+            </li>
+            <li>
+              <img src={Patricia} alt="poster" />
+            </li>
+            <li>
+              <img src={Send} alt="poster" />
+            </li>
+            <li>
+              <img src={Brass} alt="poster" />
+            </li>
+          </ul>
+        </section>
+        <section className="setup-business-section">
+          <div>
+            <h3>
+              Set up your business in just a few minutes <br/>
+              <span style={{ color: "#F06900" }}>in any country in Africa</span>
+            </h3>
+          </div>
+          <div className="setup-business-list">
+            <ul>
+              <li id='answer-questions'>
+                <img src={AnswerQuestions} alt="poster" />
+                <h5>Answer a few questions</h5>
+              </li>
+              <li id='upload-documents'>
+                <img src={UploadDocuments} alt="poster" />
+                <h5>Upload your documents</h5>
+              </li>
+              <li id='identification'>
+                <img src={IdentificationNumber} alt="poster" />
+                <h5>Get a registered company and tax identification number</h5>
+              </li>
+            </ul>
+          </div>
+          <div className='setup-business-footer'>
+              <CustomButtons 
+                title='Get started'
+                background="rgb(18, 185, 186)"
+              />
+              <div className='setup-business-footer-text'>
+                  <img src={NoteSecondIcon} alt='icon'/>
+                  <p>The service is currently available in Nigeria, Ghana, Kenya and South Africa. More countries coming soon.</p>
+              </div>
+          </div>
+        </section>
+        <section className='secure-ideas-section'>
+                  
+        </section>
+      </main>
