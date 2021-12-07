@@ -9,7 +9,7 @@ const Login = () => {
   return (
     <main className="auth-container">
       <div style={{ padding: "30px 0" }}>
-        <Link to='/'>
+        <Link to="/">
           <Logo />
         </Link>
       </div>
@@ -18,11 +18,11 @@ const Login = () => {
         <form>
           <div className="form-group">
             <label>Email Address*</label>
-            <input placeholder={"me@mail.com"} type="email" required />
+            <input placeholder={"me@mail.com"} type="email" />
           </div>
           <div className="form-group">
             <label>Password*</label>
-            <input placeholder={"Enter Password"} type="password" required />
+            <input placeholder={"Enter Password"} type="password" />
           </div>
           <div style={{ textAlign: "right" }}>
             <Link to="/forgotPassword" className="link">
@@ -30,13 +30,15 @@ const Login = () => {
             </Link>
           </div>
           <div style={{ marginTop: "10px" }}>
-            <AuthButton title="Login" background="rgba(255, 133, 0, 0.5)" />
+            <Link to="/dashboard">
+              <AuthButton title="Login" background="rgba(255, 133, 0, 0.5)" />
+            </Link>
           </div>
         </form>
-        <div className='auth-footer'>
-            <Link   to='/sign-up' className='link'>
-                Don't have an account? Create an account
-            </Link>
+        <div className="auth-footer">
+          <Link to="/sign-up" className="link">
+            Don't have an account? Create an account
+          </Link>
         </div>
       </div>
     </main>

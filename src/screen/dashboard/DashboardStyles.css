@@ -1,0 +1,83 @@
+.main {
+  margin-top: 65px;
+  /* border: 1px solid #000; */
+  background-color: #fafafa;
+  height: 100vh;
+  padding: 30px 0;
+}
+.header-container {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.header-container h3 {
+  text-align: center;
+  width: 500px;
+  font-family: NeueHaasDisplay-Roman;
+  font-size: 30px;
+  color: rgb(51, 51, 51);
+  line-height: 1.4;
+}
+.tabs-container-text {
+  font-family: NeueHaasDisplay-Roman;
+  font-size: 20px;
+  color: rgb(51, 51, 51);
+  text-align: center;
+  line-height: 1.6;
+  width: 906 px;
+}
+
+.new-service-container {
+  padding: 30px 300px;
+}
+.back-link {
+  display: flex;
+  align-items: center;
+  font-family: NeueHaasDisplay-Roman;
+  font-size: 16px;
+  color: rgb(51, 51, 51);
+  line-height: 1.4;
+}
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: center;
+}
+.card-header {
+  font-family: NeueHaasDisplay-Roman;
+  font-size: 26px;
+  color: rgb(51, 51, 51);
+  text-align: center;
+  line-height: 1.4;
+  width: 190 px;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  border-bottom: 0.5px solid #e0e0e0;
+}
+.card-list {
+  padding: 20px 30px;
+}
+.card-list li {
+  font-family: NeueHaasDisplay-Medium;
+  font-size: 12px;
+  color: rgb(51, 51, 51);
+  line-height: 1.4;
+  width: 190 px;
+  list-style: disc;
+  padding: 5px 0;
+}
+.cards-grid-header {
+  font-family: NeueHaasDisplay-Roman;
+  font-size: 30px;
+  color: rgb(51, 51, 51);
+  text-align: center;
+  line-height: 1.4;
+  width: 750 px;
+  padding: 15px 0;
+}

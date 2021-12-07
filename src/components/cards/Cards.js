@@ -1,14 +1,32 @@
 import React from "react";
 
-const Cards = ({ padding, borderLeftColor, children }) => {
+const Cards = ({
+  padding,
+  borderLeftColor,
+  children,
+  background,
+  borderLeft,
+  borderRadius,
+  boxShadow,
+  alignItems,
+  justifyContent,
+  height,
+  margin,
+}) => {
   return (
     <>
       <div
         style={{
-          background: "#fff",
+          background: background,
           padding: padding,
-          borderLeft: "3px solid",
+          borderLeft: borderLeft,
+          borderRadius: borderRadius,
           borderLeftColor: borderLeftColor,
+          boxShadow:boxShadow,
+          alignItems:alignItems,
+          justifyContent:justifyContent,
+          height:height,
+          margin:margin
         }}
       >
         {children}
