@@ -1,10 +1,10 @@
 import React from "react";
 
-const ShareholderButton = ({ title, color, background, padding, onClick }) => {
+const ShareholderButton = ({ title, background, padding, onClick }) => {
   return (
     <button
       style={{
-        background: '#FF8500',
+        background: "#FF8500",
         boxShadow: "rgb(255 133 0 / 20%) 0px 2px 4px 0px",
         align: "right",
         textAlign: "right",
