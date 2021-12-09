@@ -8,6 +8,7 @@ import Login from "./screen/auth/Login";
 import ForgotPassword from "./screen/auth/ForgotPassword";
 import Dashboard from "./screen/dashboard/Dashboard";
 import NewService from "./screen/dashboard/NewService";
+import CompanyApplication from "./screen/dashboard/companyApplication/CompanyApplication";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/forgotPassword" element={<ForgotPassword />} />
         <Route path="/dashboard" element={<Dashboard/>} />
         <Route path="/newServices" element={<NewService/>} />
+        <Route path="/companyApplication" element={<CompanyApplication/>} />
       </Routes>
     </Router>
   );

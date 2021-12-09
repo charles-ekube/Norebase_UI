@@ -1,0 +1,46 @@
+/* .grid-layout {
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid red;
+
+} */
+.select-country-container {
+  height: 100vh;
+  padding: 50px 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fafafa;
+}
+
+.select-country-item {
+  font-family: NeueHaasDisplay-Roman;
+  font-size: 20px;
+  color: rgb(51, 51, 51);
+  line-height: 1.4;
+}
+.application-title-container {
+  height: 100vh;
+  padding: 50px 150px;
+  background-color: #fafafa;
+}
+.application-title-container p, 
+.company-information-container p
+{
+  height: 45 px;
+  font-family: NeueHaasDisplay-Roman;
+  font-size: 30px;
+  color: rgb(51, 51, 51);
+  line-height: 1.4;
+  width: 750 px;
+}
+.company-information-container {
+    /* height: 100vh; */
+    padding: 50px 150px;
+    background-color: #fafafa;
+}
+.input-group {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:30px;
+}

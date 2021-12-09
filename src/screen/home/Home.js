@@ -1,6 +1,5 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
-import Background from "../../assets/map.svg";
 import CustomButtons from "../../components/buttons/CustomButtons";
 import "./HomeStyles.css";
 import NoteIcon from "../../assets/notes.svg";
@@ -14,7 +13,6 @@ import IdentificationNumber from "../../assets/card3.svg";
 import NoteSecondIcon from "../../assets/note.svg";
 import Navbar from "../../components/widgets/navbar/Navbar";
 import Footer from "../../components/widgets/footer/Footer";
-import NavComponent from "../../components/nav/NavComponent";
 import CarouselSlider from "../../components/carousel/CarouselSlider";
 import SlidesData from "../../components/carousel/CarouselGrid";
 

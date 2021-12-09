@@ -7,17 +7,28 @@ import Cards from "../../components/cards/Cards";
 import CustomButtons from "../../components/buttons/CustomButtons";
 import ServicesButton from "../../components/buttons/ServicesButton";
 import Modal from "../../components/modals/Modal";
+import CustomRadioSelect from "../../components/radioSelect/CustomRadioSelect";
+import {
+  CompanyList,
+  PatentList,
+  TrademarkList,
+} from "../../components/radioSelect/RadioList";
+import { Link } from "react-router-dom";
 
 const NewService = () => {
   const history = useNavigate();
 
   const [state, setState] = useState({
     showModal: false,
-    price: "",
+    price: null,
     tradMarkHeader: "Do you want to register a new trademark?",
     companyHeader: "Do you want to incorporate a new company?",
     patentHeader: "Do you want to register a new patent?",
     title: "",
+    renderTrademarkList: false,
+    renderCompanyList: false,
+    renderPatentList: false,
+    displayPrice:false,
   });
 
   const toggleModal = () => {
@@ -30,16 +41,48 @@ const NewService = () => {
 
   const renderTrademark = () => {
     toggleModal();
-    setState((prevState) => ({ ...prevState, title: state.tradMarkHeader }));
+    setState((prevState) => ({
+      ...prevState,
+      title: state.tradMarkHeader,
+      renderTrademarkList: true,
+      renderCompanyList: false,
+      renderPatentList: false,
+    }));
   };
   const renderCompanyIncorporation = () => {
     toggleModal();
-    setState((prevState) => ({ ...prevState, title: state.companyHeader }));
+    setState((prevState) => ({
+      ...prevState,
+      title: state.companyHeader,
+      renderCompanyList: true,
+      renderTrademarkList: false,
+      renderPatentList: false,
+    }));
   };
   const renderPatent = () => {
     toggleModal();
-    setState((prevState) => ({ ...prevState, title: state.patentHeader }));
+    setState((prevState) => ({
+      ...prevState,
+      title: state.patentHeader,
+      renderPatentList: true,
+      renderTrademarkList: false,
+      renderCompanyList: false,
+    }));
   };
+
+  function selectItem(id) {
+    PatentList.map((val, i) => {
+      if (val.id === id) {
+          console.log(val);
+            setState((prevState) => ({ ...prevState, price: val.price }));
+          setState((prevState) => ({ ...prevState, displayPrice: true, price: val.price }));
+          console.log(state.price)
+
+      } else {
+        return val;
+      }
+    });
+  }
 
   return (
     <>
@@ -135,19 +178,75 @@ const NewService = () => {
           </div>
         </section>
         {state.showModal ? (
-          <Modal toggleModal={toggleModal}>
+          <Modal>
             <Cards
               background="#fff"
               borderRadius="5px"
-              padding="30px 20px"
+              padding="30px"
               margin="auto auto"
+            
             >
               <h5>{state.title}</h5>
               <div>
                 <p>Select your country</p>
                 <div>
-                    
+                  {state.renderTrademarkList
+                    ? TrademarkList.map((item, id) => (
+                        <div key={item.id}>
+                          <CustomRadioSelect title={item.country} />
+                        </div>
+                      ))
+                    : null}
+
+                  {state.renderCompanyList
+                    ? CompanyList.map((item, id) => (
+                        <div key={item.id}>
+                          <CustomRadioSelect title={item.country} />
+                        </div>
+                      ))
+                    : null}
+
+                  {state.renderPatentList ? (
+                    <>
+                      <div>
+                        {PatentList.map((item, id) => (
+                          <>
+                            <div key={item.id} onClick={()=>selectItem(item.id)}>
+                              <CustomRadioSelect title={item.country}  />
+                            </div>
+                          </>
+                        ))}
+                      </div>
+
+                      {/* <div>
+                        {PatentList.map((item, id) => (
+                          <div>
+                            <p>Price Total</p>
+                            <p>{item.price}</p>
+                          </div>
+                        ))}
+                      </div> */}
+                    </>
+                  ) : null}
                 </div>
+              </div>
+
+              <p>*Price may vary based on selected structure and add-ons</p>
+
+              <div style={{display:'flex', justifyContent:'space-between', padding:"20px 0"}}>
+                <ServicesButton title="Cancel" onClick={toggleModal}
+                background='#fff'
+                color='#FF8500'
+                padding="15px 40px"
+                />
+                <Link to='/companyApplication'>
+                
+                <ServicesButton title="Confirm" 
+                background="#FF8500"
+                color="#fff"
+                padding="15px 40px"
+                />
+                </Link>
               </div>
             </Cards>
           </Modal>

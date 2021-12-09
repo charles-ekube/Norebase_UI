@@ -16,7 +16,7 @@ const Modal = ({ children, toggleModal }) => {
           justifyContent: "center",
           alignItems: "center",
         }}
-        onClick={toggleModal}
+        // onClick={toggleModal}
       >
         {children}
       </div>
