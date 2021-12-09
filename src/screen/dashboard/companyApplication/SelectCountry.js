@@ -30,6 +30,7 @@ const SelectCountry = () => {
 
   return (
     <main className="select-country-container">
+      <p>Select Your Country</p>
       {CompanyList.map((item, id) => (
         <>
           <div key={item.id} onClick={() => selectItem(item.id)} className='select-country-item'>

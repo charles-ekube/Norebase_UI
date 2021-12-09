@@ -25,7 +25,8 @@
   background-color: #fafafa;
 }
 .application-title-container p, 
-.company-information-container p
+.company-information-container p, 
+.share-capital-container p
 {
   height: 45 px;
   font-family: NeueHaasDisplay-Roman;
@@ -38,6 +39,11 @@
     /* height: 100vh; */
     padding: 50px 150px;
     background-color: #fafafa;
+}
+
+.share-capital-container {
+  padding: 50px 150px;
+  justify-content: center;
 }
 .input-group {
     display: grid;

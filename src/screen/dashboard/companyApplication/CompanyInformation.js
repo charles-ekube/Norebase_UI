@@ -33,27 +33,31 @@ const CompanyInformation = () => {
           <CustomInput type="text" label="Proposed Company Name (Option 1)*" />
 
           <div className="input-group">
-          <Select
+            <div>
+              <CustomInput type="text" label="Nature of Business*" />
+              <Select
                 options={options} // set list of the data
                 value={selectedOption} // set selected value
                 onChange={handleChange} 
                />
+            </div>
 
+          </div>
+
+          <div className="input-group">
+          
             <CustomInput type="text" label="Business Email*" />
           </div>
 
           <div className="input-group">
-            <div>
-              <CustomInput type="text" label="Nature of Business*" />
-            </div>
-
-            <CustomInput type="text" label="Business Email*" />
+          
+            <CustomInput type="text" label="Business Number*" />
           </div>
-            <div>
-                <label>Description</label>
-                <textarea>
 
-                </textarea>
+
+            <div className="input-group">
+            <CustomInput type="textarea" label="Description*" />
+               
             </div>
 
             <div className='input-group'>
@@ -64,10 +68,10 @@ const CompanyInformation = () => {
             </div>
 
             <fieldset style={{border:'none'}}>
-                <legend>Physical Address</legend>
+                <legend>Registered office address</legend>
                 <div>
-                    <CustomInput type='checkbox'/>
-                    <span>Would you like Norebase to provide you an address in Kenya? ($600)</span> 
+                    
+                    <span> <CustomInput type='checkbox'/> Would you like Norebase to provide you an address in Kenya? ($600)</span> 
                 </div>
 
                 <div>
