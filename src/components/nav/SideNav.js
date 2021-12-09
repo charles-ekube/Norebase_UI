@@ -80,7 +80,7 @@ const SideNav = ({ children, slides }) => {
             </section>
           )
         })}
-        <div style={{background:'red', width:'80%',padding:'20px', position:'fixed', bottom:'0', display:'flex', justifyContent:'space-between'}}>
+        <div style={{background:'white', width:'80%',padding:'20px', position:'fixed', bottom:'0', display:'flex', justifyContent:'space-between'}}>
           <ServicesButton
              background="#FF8500"
              color="#fff"

@@ -1,7 +1,7 @@
 export const TrademarkList = [
     {
         id:1,
-        country: 'Ghanas',
+        country: 'Ghana',
         price: '650'
     },
     {
@@ -23,7 +23,7 @@ export const TrademarkList = [
 export const CompanyList = [
     {
         id:1,
-        country: 'Ghanad',
+        country: 'Ghana',
         price: '650'
     },
     {
