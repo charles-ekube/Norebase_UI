@@ -134,6 +134,7 @@ const ShareCapital = () => {
       </section>
     </>
   );
+
 };
 
 export default ShareCapital;

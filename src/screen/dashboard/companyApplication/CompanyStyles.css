@@ -24,6 +24,7 @@
   padding: 50px 150px;
   background-color: #fafafa;
 }
+
 .application-title-container > p,
 .company-information-container > p,
 .share-capital-container > p,
@@ -44,6 +45,28 @@
   padding: 50px 150px 100px 150px;
   background-color: #fafafa;
 }
+
+.share-capital-container {
+  height: 100vh;
+  padding: 50px 150px;
+  justify-content: center;
+  background-color: #fafafa;
+}
+
+.director-container{
+  height: 100vh;
+  padding: 50px 150px;
+  justify-content: center;
+  background-color: #fafafa;
+}
+
+.auditorInformation-container{
+  height: 100vh;
+  padding: 50px 150px;
+  justify-content: center;
+  background-color: #fafafa;
+}
+
 .input-group {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

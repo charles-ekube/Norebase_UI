@@ -106,6 +106,10 @@ const SideNav = ({ children, slides,tabList }) => {
         </section>
       </main>
 
+
+
+     
+    
     </>
   );
 };

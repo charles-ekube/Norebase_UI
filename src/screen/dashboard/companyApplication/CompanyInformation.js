@@ -63,6 +63,7 @@ const CompanyInformation = () => {
 
           <div className="input-group">
             <div>
+
               <label className="label">Nature of Business*</label>
               <CustomSelect />
             </div>
@@ -109,6 +110,7 @@ const CompanyInformation = () => {
                 <span>KES</span>
                 <CustomInput type="text" border="none" />
               </div>
+
             </div>
             <CustomInput
               type="date"
@@ -133,6 +135,7 @@ const CompanyInformation = () => {
             </div>
             {/* <CustomInput type="text" label="" /> */}
           </div>
+
 
           <fieldset style={{ border: "none", margin: "30px 0" }}>
             <legend className="legend">Physical Address</legend>
@@ -180,6 +183,7 @@ const CompanyInformation = () => {
                     <label className="label">Country*</label>
                     <CustomSelect />
                   </div>
+
                 </div>
               </div>
             )}
