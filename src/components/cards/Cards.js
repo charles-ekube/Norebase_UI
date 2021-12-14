@@ -12,6 +12,7 @@ const Cards = ({
   justifyContent,
   height,
   margin,
+  width
 }) => {
   return (
     <>
@@ -26,7 +27,8 @@ const Cards = ({
           alignItems:alignItems,
           justifyContent:justifyContent,
           height:height,
-          margin:margin
+          margin:margin,
+          width:width
         }}
       >
         {children}

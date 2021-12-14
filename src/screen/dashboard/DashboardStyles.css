@@ -81,3 +81,29 @@
   width: 750 px;
   padding: 15px 0;
 }
+
+
+@media screen and (max-width: 1225px) {
+.main {
+  width: 100vw;
+  margin-top: 40px;
+}
+  .header-container {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    justify-content: space-between;
+  }
+  .header-container h3 {
+    width: 50%;
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .new-service-container {
+    padding: 30px ;
+  }
+  .cards-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

@@ -1,6 +1,6 @@
 import React from "react";
 
-const CustomInput = ({ type, onChange, value, placeholder, label, height, prefix }) => {
+const CustomInput = ({ type, onChange, value, placeholder, label, height, prefix, border, margin }) => {
   return (
     <>
       <div>
@@ -25,11 +25,11 @@ const CustomInput = ({ type, onChange, value, placeholder, label, height, prefix
           style={{
             background: "#fff",
             borderRadius: "5px",
-            border: "1px solid #F0F0F0",
+            border: border,
             width: "100%",
-            padding: "10px",
-            margin: "10px 0",
-            height:height
+            padding: "12px",
+            margin: margin,
+           
           }}
         />
       </div>

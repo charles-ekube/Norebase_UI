@@ -24,8 +24,10 @@
   padding: 50px 150px;
   background-color: #fafafa;
 }
-.application-title-container p, 
-.company-information-container p
+.application-title-container > p,
+.company-information-container > p,
+.share-capital-container > p,
+.share-holder-container > p
 {
   height: 45 px;
   font-family: NeueHaasDisplay-Roman;
@@ -34,13 +36,97 @@
   line-height: 1.4;
   width: 750 px;
 }
-.company-information-container {
-    /* height: 100vh; */
-    padding: 50px 150px;
-    background-color: #fafafa;
+.company-information-container,
+.share-capital-container,
+.share-holder-container
+{
+  /* height: 100vh; */
+  padding: 50px 150px 100px 150px;
+  background-color: #fafafa;
 }
 .input-group {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap:30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  align-items: center;
+}
+.label {
+  height: 20px;
+  font-family: NeueHaasDisplay-Roman;
+  font-size: 14px;
+  color: rgb(51, 51, 51);
+  line-height: 1.4;
+  width: 750px;
+}
+.number-selector {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  align-items: center;
+  gap: 5px;
+}
+.description-input {
+  display: flex;
+  flex-direction: column;
+}
+.description-input textarea {
+  margin: 10px 0;
+  border-radius: 5px;
+  padding: 20px;
+  border: 1px solid #f0f0f0;
+}
+.prefix-container {
+  border: 1px solid #f0f0f0;
+  height: 45px;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  margin: 10px 0;
+  padding: 0 10px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.legend {
+  height: 30 px;
+  width: 750 px;
+  font-family: NeueHaasDisplay-Medium;
+  font-size: 20px;
+  color: rgb(51, 51, 51);
+  line-height: 1.4;
+}
+.checkbox-container {
+  display: grid;
+  grid-template-columns: 5% 95%;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 0;
+  /* border: 1px solid red; */
+  margin-left: -10px;
+}
+.quick-link p {
+  font-family: NeueHaasDisplay-Roman;
+  font-size: 16px;
+  color: rgb(51, 51, 51);
+  line-height: 1.4;
+}
+.quick-link span {
+  color: rgb(85, 95, 235);
+}
+.article-text {
+  margin: 15px 0;
+  font-family: NeueHaasDisplay-Roman;
+  font-size: 14px;
+  color: rgb(51, 51, 51);
+  line-height: 1.4;
+  border-radius: 0 px;
+}
+.linkToMore {
+    font-family: NeueHaasDisplay-Roman;
+    font-size: 14px;
+    color: rgb(51, 51, 51);
+    line-height: 1.4; 
+}
+.article-text>p {
+    width: 601 px;
+    height: 607.406 px;
+  
 }

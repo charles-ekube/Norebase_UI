@@ -21,3 +21,14 @@
   line-height: 1.4;
   width: 165 px;
 }
+
+
+@media screen and (max-width: 1225px) {
+  .tabs {
+    width: 100%;
+    margin: 0;
+  }
+  .tabs-content {
+    padding: 30px;
+  }
+}

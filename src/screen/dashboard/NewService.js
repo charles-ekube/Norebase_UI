@@ -20,7 +20,7 @@ const NewService = () => {
 
   const [state, setState] = useState({
     showModal: false,
-    price: null,
+    price: '',
     tradMarkHeader: "Do you want to register a new trademark?",
     companyHeader: "Do you want to incorporate a new company?",
     patentHeader: "Do you want to register a new patent?",
@@ -28,7 +28,8 @@ const NewService = () => {
     renderTrademarkList: false,
     renderCompanyList: false,
     renderPatentList: false,
-    displayPrice:false,
+    displayPrice: false,
+    priceList: null,
   });
 
   const toggleModal = () => {
@@ -73,15 +74,22 @@ const NewService = () => {
   function selectItem(id) {
     PatentList.map((val, i) => {
       if (val.id === id) {
-          console.log(val);
-            setState((prevState) => ({ ...prevState, price: val.price }));
-          setState((prevState) => ({ ...prevState, displayPrice: true, price: val.price }));
-          console.log(state.price)
+        console.log(val);
+        setState((prevState) => ({ ...prevState, price: val.price, priceList: val }));
+        // console.log(state.priceList.country)
+        renderPrice();
 
       } else {
         return val;
       }
     });
+  }
+
+
+  const renderPrice = () => {
+    if (state.price !== '' && state.priceList !== null) {
+      setState((prevState) => ({ ...prevState, displayPrice: true }));
+    }
   }
 
   return (
@@ -184,7 +192,7 @@ const NewService = () => {
               borderRadius="5px"
               padding="30px"
               margin="auto auto"
-            
+
             >
               <h5>{state.title}</h5>
               <div>
@@ -192,18 +200,18 @@ const NewService = () => {
                 <div>
                   {state.renderTrademarkList
                     ? TrademarkList.map((item, id) => (
-                        <div key={item.id}>
-                          <CustomRadioSelect title={item.country} />
-                        </div>
-                      ))
+                      <div key={item.id}>
+                        <CustomRadioSelect title={item.country} onClick={() => selectItem(item.id)} />
+                      </div>
+                    ))
                     : null}
 
                   {state.renderCompanyList
                     ? CompanyList.map((item, id) => (
-                        <div key={item.id}>
-                          <CustomRadioSelect title={item.country} />
-                        </div>
-                      ))
+                      <div key={item.id}>
+                        <CustomRadioSelect title={item.country} onClick={() => selectItem(item.id)} />
+                      </div>
+                    ))
                     : null}
 
                   {state.renderPatentList ? (
@@ -211,41 +219,42 @@ const NewService = () => {
                       <div>
                         {PatentList.map((item, id) => (
                           <>
-                            <div key={item.id} onClick={()=>selectItem(item.id)}>
-                              <CustomRadioSelect title={item.country}  />
+                            <div key={item.id} onClick={() => selectItem(item.id)}>
+                              <CustomRadioSelect title={item.country} onClick={() => selectItem(item.id)} />
                             </div>
                           </>
                         ))}
                       </div>
-
-                      {/* <div>
-                        {PatentList.map((item, id) => (
-                          <div>
-                            <p>Price Total</p>
-                            <p>{item.price}</p>
-                          </div>
-                        ))}
-                      </div> */}
                     </>
                   ) : null}
                 </div>
               </div>
 
-              <p>*Price may vary based on selected structure and add-ons</p>
 
-              <div style={{display:'flex', justifyContent:'space-between', padding:"20px 0"}}>
+              <p style={{padding:'10px 0'}}>*Price may vary based on selected structure and add-ons</p>
+
+              <div style={{padding:'20px 0'}}>
+                {state.displayPrice &&
+                  <div>
+                    <p>Price Total</p>
+                    <p>$ {state.priceList.price}</p>
+                  </div>
+                }
+              </div>
+
+              <div style={{ display: 'flex', justifyContent: 'space-between', padding: "20px 0" }}>
                 <ServicesButton title="Cancel" onClick={toggleModal}
-                background='#fff'
-                color='#FF8500'
-                padding="15px 40px"
+                  background='#fff'
+                  color='#FF8500'
+                  padding="15px 40px"
                 />
                 <Link to='/companyApplication'>
-                
-                <ServicesButton title="Confirm" 
-                background="#FF8500"
-                color="#fff"
-                padding="15px 40px"
-                />
+
+                  <ServicesButton title="Confirm"
+                    background="#FF8500"
+                    color="#fff"
+                    padding="15px 40px"
+                  />
                 </Link>
               </div>
             </Cards>
